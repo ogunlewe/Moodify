@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moodify </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="holders">
+
+      <div class="head">
+        <a href="index.html" onclick="navigateTo('signup-form')">SIGN IN</a>
+        <a href="signup.html">SIGN UP</a>
+      </div>
+
+    <form action="" method="post" id="sign-up" class="page">
+      <div class="labels">
+
+        <input type="email" name="" id="email" placeholder="create your email" required>
+      </div>
+
+      <div class="labels">
+        <input type="password" name="" id="password" placeholder="create your password" required>
+      </div>
+
+      <div class="labels">
+        <input type="password" name="" id="password" placeholder="confirm your password" required>
+      </div>
+
+      <div class="check"><input type="checkbox" name="" id="Check"> Stay Signed In
+      </div>
+      <div class="labels"><button type="submit">SIGN UP</button></div>
+      <p id="google-signup" class="label1">google</p>
+
+      <p id="message"></p>
+  </div>
+  </form>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p id="modal-message"></p>
+      <button id="close-modal" class="close-btn">Close</button>
+    </div>
+  </div>
+
+
+  </div>
+  <script src="../js/sigup.js" type="module"></script>
+  
+</body>
+
+</html>
