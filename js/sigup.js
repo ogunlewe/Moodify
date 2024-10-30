@@ -31,12 +31,12 @@ const app = initializeApp(firebaseConfig);
       modal.style.display = "flex";
     }
 
-    // Close the modal
+ 
     closeModalBtn.addEventListener("click", () => {
       modal.style.display = "none";
     });
 
-    // Handle email/password signup
+    
     signupForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -48,19 +48,23 @@ const app = initializeApp(firebaseConfig);
           const user = userCredential.user;
           showModal("Signup successful! Welcome, " + user.email);
           signupForm.reset();
+          window.location.href = '../public/index.html';
+
         })
         .catch((error) => {
           showModal("Error: " + error.message, true);
         });
     });
 
-    // Handle Google Authentication
+
     googleSignupButton.addEventListener("click", () => {
       const provider = new GoogleAuthProvider();
       signInWithPopup(auth, provider)
         .then((result) => {
           const user = result.user;
           showModal("Google signup successful! Welcome, " + user.displayName);
+          window.location.href = '../public/index.html';
+
         })
         .catch((error) => {
           showModal("Error: " + error.message, true);

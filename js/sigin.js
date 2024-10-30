@@ -56,6 +56,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebas
           const user = userCredential.user;
           showModal("Sign-in successful! Welcome back, " + user.email);
           signinForm.reset();
+          window.location.href = '../public/app.html';
+
         })
         .catch((error) => {
           showModal("Error: " + error.message, true);
@@ -69,6 +71,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebas
         .then((result) => {
           const user = result.user;
           showModal("Google sign-in successful! Welcome, " + user.displayName);
+          window.location.href = '../public/app.html';
+
         })
         .catch((error) => {
           showModal("Error: " + error.message, true);
